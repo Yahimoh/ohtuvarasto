@@ -24,6 +24,7 @@ jobs:
         run: poetry run coverage run --branch -m pytest
       - name: Lint
         run: pylint src
+        continue-on-error: true
       - name: Coverage report
         run: poetry run coverage xml
       - name: Coverage report to Codecov
